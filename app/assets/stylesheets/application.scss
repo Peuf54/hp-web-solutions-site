@@ -34,12 +34,6 @@ h3 {
         width: 64px;
     }
 
-    @media screen and (min-width: 800px) {
-        .menu_icon {
-            display: none;
-        }
-    }
-
     nav {
         ul {
             display: flex;
@@ -55,33 +49,33 @@ h3 {
                 }
             }
         }
+
+        background-color: $secondary-color;
+        position: absolute;
+        top: 130px;
+        right: -1px;
+        padding: $spacing-small;
+        transform: translateX(100%); // Caché par défaut
+        transition: transform 0.5s ease;
+
+        ul {
+            flex-direction: column;
+        }
     }
 }
 
 @media screen and (max-width: 800px) {
-    #logo-nav-container {
-        nav {
-            background-color: $secondary-color;
-            position: absolute;
-            top: 120px;
-            padding: $spacing-small;
-            transition: .5s ease;
-            
-            ul {
-                flex-direction: column;
-            }
-        }
-
-        .opened {
-            right: 0px;
-        }
-
-        .closed {
-            right: -100%;
-        }
-
-        .hidden {
-            display: none;
-        }
+    #logo-nav-container .opened {
+        transform: translateX(-2%); // Montré
     }
+}
+
+@media screen and (min-width: 800px) {
+    #logo-nav-container .menu_icon {
+        display: none;
+    }
+}
+
+.hidden {
+    display: none;
 }
