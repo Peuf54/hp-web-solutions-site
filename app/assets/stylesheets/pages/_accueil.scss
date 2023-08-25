@@ -1,5 +1,5 @@
 #accueil_container {
-    
+
     #banner_container {
         display: flex;
         align-items: center;
@@ -30,6 +30,12 @@
         img {
             width: 450px;
         }
+
+        @media screen and (max-width: 800px) {
+            img {
+                width: 250px;
+            }
+        }
     }
 
     #services_container {
@@ -43,9 +49,11 @@
         #services {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
 
             .service_card {
                 width: 20%;
+
 
                 *:not(:last-child) {
                     margin-bottom: 5px;
@@ -55,6 +63,12 @@
                     width: 90px;
                 }
             }
+
+            @media screen and (max-width: 800px) {
+                .service_card {
+                    width: 40%;
+                }
+            }
         }
     }
 
@@ -62,12 +76,24 @@
         color: $secondary-color;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
 
         .competence_card {
             width: 30%;
 
             h3 {
                 margin-bottom: 5px;
+            }
+        }
+
+    }
+    @media screen and (max-width: 800px) {
+        #competences_container {
+            justify-content: space-evenly;
+            row-gap: $spacing-medium;
+
+            .competence_card {
+                width: 40%;
             }
         }
     }
@@ -89,6 +115,16 @@
 
         img {
             width: 400px;
+        }
+
+    }
+    @media screen and (max-width: 800px) {
+        #adaptation_container {
+            align-items: center;
+
+            img {
+                width: 250px;
+            }
         }
     }
 
@@ -121,6 +157,7 @@
         #pourquoi_nous {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
 
             .pourquoi_nous_card {
                 width: 30%;
@@ -131,6 +168,17 @@
 
                 img {
                     width: 90px;
+                }
+            }
+        }
+        @media screen and (max-width: 800px) {
+            #pourquoi_nous {
+                justify-content: space-evenly;
+                row-gap: $spacing-medium;
+        
+                .pourquoi_nous_card {
+                    width: 40%;
+                    text-align: center;
                 }
             }
         }

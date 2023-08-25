@@ -16,10 +16,13 @@
   </head>
 
   <body>
-    <div id="logo-nav-container" class="sizer">
+    <div id="logo-nav-container" class="sizer" data-controller="burger-menu">
       <img src="<%= asset_path 'logo.svg' %>" alt="Logo de HP Web Solutions">
 
-      <nav>
+      <img class="menu_icon" id="open_icon" src="<%= asset_path 'burger_menu.svg' %>" alt="Icon d'ouverture menu." data-action="click->burger-menu#open" data-burger-menu-target="openIcon">
+      <img class="menu_icon hidden" id="close_icon" src="<%= asset_path 'close.svg' %>" alt="Icon de fermeture menu." data-action="click->burger-menu#close" data-burger-menu-target="closeIcon">
+
+      <nav class="closed" data-burger-menu-target="burgerMenu">
         <ul>
             <li><%= link_to 'Accueil', root_path %></li>
             <li><%= link_to 'Tarifs', tarifs_path %></li>
