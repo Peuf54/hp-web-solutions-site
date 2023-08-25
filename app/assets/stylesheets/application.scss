@@ -50,18 +50,22 @@ h3 {
                 }
             }
         }
+    }
 
-        background-color: $secondary-color;
-        position: absolute;
-        top: 135px;
-        right: 7px;
-        width: 0; // Initial state, hidden
-        padding: 0; // Keep the vertical padding but start with 0 horizontal padding
-        overflow: hidden; // Hide the content that exceeds the width
-        transition: width 0.5s ease, padding 0.5s ease; // Transition for width and padding
+    @media screen and (max-width: 800px) {
+        nav {
+            background-color: $secondary-color;
+            position: absolute;
+            top: 135px;
+            right: 7px;
+            width: 0; // Initial state, hidden
+            padding: 0; // Keep the vertical padding but start with 0 horizontal padding
+            overflow: hidden; // Hide the content that exceeds the width
+            transition: width 0.5s ease, padding 0.5s ease; // Transition for width and padding
 
-        ul {
-            flex-direction: column;
+            ul {
+                flex-direction: column;
+            }
         }
     }
 }
@@ -84,7 +88,7 @@ h3 {
         .menu_icon {
             width: 50px;
         }
-        
+
         nav {
             top: 100px;
         }
@@ -93,7 +97,7 @@ h3 {
 
 @media screen and (max-width: 410px) {
     #logo-nav-container {
-    
+
         img {
             width: 260px;
         }
