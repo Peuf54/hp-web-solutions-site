@@ -53,10 +53,11 @@ h3 {
         background-color: $secondary-color;
         position: absolute;
         top: 130px;
-        right: -1px;
-        padding: $spacing-small;
-        transform: translateX(100%); // Caché par défaut
-        transition: transform 0.5s ease;
+        right: 0;
+        width: 0; // Initial state, hidden
+        padding: 0; // Keep the vertical padding but start with 0 horizontal padding
+        overflow: hidden; // Hide the content that exceeds the width
+        transition: width 0.5s ease, padding 0.5s ease; // Transition for width and padding
 
         ul {
             flex-direction: column;
@@ -66,7 +67,8 @@ h3 {
 
 @media screen and (max-width: 800px) {
     #logo-nav-container .opened {
-        transform: translateX(-2%); // Montré
+        width: 170px; // or adjust as per design
+        padding: $spacing-small; // Restore padding when opened
     }
 }
 
