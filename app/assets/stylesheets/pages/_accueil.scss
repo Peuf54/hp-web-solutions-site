@@ -39,6 +39,12 @@
 
     }
 
+    @media screen and (max-width: 800px) {
+        #banner_container {
+            row-gap: $spacing-small;
+        }
+    }
+
     @media screen and (max-width: 600px) {
         #banner_container {
             flex-direction: column-reverse;
@@ -240,12 +246,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: $spacing-medium;
+        gap: $spacing-small;
     }
 
     #footer_container {
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 }
