@@ -43,8 +43,9 @@ h3 {
                 list-style-type: none;
 
                 a {
-                    color: $primary-color;
+                    color: $fourth-color;
                     text-decoration: none;
+                    font-weight: bold;
                     font-family: $main-font;
                 }
             }
@@ -52,8 +53,8 @@ h3 {
 
         background-color: $secondary-color;
         position: absolute;
-        top: 130px;
-        right: 0;
+        top: 135px;
+        right: 7px;
         width: 0; // Initial state, hidden
         padding: 0; // Keep the vertical padding but start with 0 horizontal padding
         overflow: hidden; // Hide the content that exceeds the width
@@ -66,9 +67,36 @@ h3 {
 }
 
 @media screen and (max-width: 800px) {
+    #logo-nav-container {
+        padding: $spacing-small;
+    }
+
     #logo-nav-container .opened {
         width: 170px; // or adjust as per design
         padding: $spacing-small; // Restore padding when opened
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #logo-nav-container {
+        padding: 6px 12px;
+
+        .menu_icon {
+            width: 50px;
+        }
+        
+        nav {
+            top: 100px;
+        }
+    }
+}
+
+@media screen and (max-width: 410px) {
+    #logo-nav-container {
+    
+        img {
+            width: 260px;
+        }
     }
 }
 
