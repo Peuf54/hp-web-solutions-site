@@ -1,0 +1,22 @@
+.cta {
+    padding: 8px 24px;
+    text-decoration: none;
+    border-radius: 16px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+a.cta:not(:last-child) {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.main-cta {
+    background-color: $fourth-color;
+    color: $secondary-color;
+}
+
+.secondary-cta {
+    background-color: $secondary-color;
+    color: $third-color;
+}

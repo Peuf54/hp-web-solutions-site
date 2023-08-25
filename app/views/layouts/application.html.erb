@@ -7,18 +7,28 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
   </head>
 
   <body>
-    <nav>
-    <ul>
-        <li><%= link_to 'Accueil', root_path %></li>
-        <li><%= link_to 'Tarifs', tarifs_path %></li>
-        <li><%= link_to 'Nos Réalisations', nos_realisations_path %></li>
-        <li><%= link_to 'Contact', contact_path %></li>
-    </ul>
-</nav>
-<%= yield %>
-  <%= render 'shared/flashes' %>
-</body>
+    <div id="logo-nav-container" class="sizer">
+      <img src="<%= asset_path 'logo.svg' %>" alt="Logo de HP Web Solutions">
+
+      <nav>
+        <ul>
+            <li><%= link_to 'Accueil', root_path %></li>
+            <li><%= link_to 'Tarifs', tarifs_path %></li>
+            <li><%= link_to 'Nos Services', '#services' %></li>
+            <li><%= link_to 'Contact', contact_path %></li>
+        </ul>
+      </nav>
+    </div>
+    <%= yield %>
+    <%= render 'shared/flashes' %>
+  </body>
 </html>

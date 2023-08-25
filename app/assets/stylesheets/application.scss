@@ -1,5 +1,44 @@
 @import "variables";
 @import "components/*";
-@import "layouts/*";
 @import "pages/*";
 @import "shared/*";
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@100;200;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $secondary-font;
+}
+
+h1, h2, h3 {
+    font-family: $main-font;
+}
+
+#logo-nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        width: 300px;
+    }
+
+    nav {
+        ul {
+            display: flex;
+            gap: 30px;
+
+            li {
+                list-style-type: none;
+                
+                a {
+                    color: $primary-color;
+                    text-decoration: none;
+                    font-family: $main-font;
+                }
+            }
+        }
+    }
+}

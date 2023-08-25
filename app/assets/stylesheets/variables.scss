@@ -1,8 +1,8 @@
 /* ---------- COLORS ---------- */
-$primary-color: #007bff;
-$secondary-color: #6c757d;
-$accent-color: #ff9800;
-$background-color: #f4f4f4;
+$primary-color: #000000;
+$secondary-color: #ffffff;
+$third-color: #EB7541;
+$fourth-color: #1D638F;
 /* ------- END COLORS ------- */
 
 /* ---------- COLOR CLASSES ---------- */
@@ -14,12 +14,12 @@ $background-color: #f4f4f4;
     color: $secondary-color;
 }
 
-.color-accent {
-    color: $accent-color;
+.color-third {
+    color: $third-color;
 }
 
-.color-background {
-    background-color: $background-color;
+.color-fourth {
+    background-color: $fourth-color;
 }
 /* ------- END COLOR CLASSES ------- */
 
@@ -32,20 +32,20 @@ $background-color: #f4f4f4;
     background-color: $secondary-color;
 }
 
-.bg-accent {
-    background-color: $accent-color;
+.bg-third {
+    background-color: $third-color;
 }
 
-.bg-background {
-    background-color: $background-color;
+.bg-fourth {
+    background-color: $fourth-color;
 }
 /* ------- END BACKGROUND COLOR CLASSES ------- */
 
 /* ---------- SPACING ---------- */
-$spacing-unit: 8px;
-$spacing-small: $spacing-unit * 2;
-$spacing-medium: $spacing-unit * 3;
-$spacing-large: $spacing-unit * 4;
+$spacing-unit: 16px;
+$spacing-small: $spacing-unit * 1.5;
+$spacing-medium: $spacing-unit * 2;
+$spacing-large: $spacing-unit * 3;
 /* ------- END SPACING ------- */
 
 /* ---------- BORDER ---------- */
@@ -53,3 +53,9 @@ $border-width: 1px;
 $border-radius: 4px;
 /* ------- END BORDER ------- */
 
+/* ---------- FONTS ---------- */
+$main-font: 'Montserrat', sans-serif;
+$secondary-font: 'Lato', sans-serif;
+/* ------- END FONTS ------- */
+
+$content-width: 1200px;

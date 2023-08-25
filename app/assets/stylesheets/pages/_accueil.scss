@@ -1,0 +1,152 @@
+#accueil_container {
+    
+    #banner_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: $spacing_large;
+        background-color: $third-color;
+
+        #banner_text {
+            display: flex;
+            flex-direction: column;
+            gap: $spacing_small;
+            color: $secondary-color;
+
+            h2 {
+                font-family: $main-font;
+            }
+
+            p {
+                font-family: $secondary-font;
+            }
+
+            #banner_cta {
+                display: inline-block;
+                gap: $spacing-small;
+            }
+        }
+
+        img {
+            width: 450px;
+        }
+    }
+
+    #services_container {
+
+        h2 {
+            color: $fourth-color;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #services {
+            display: flex;
+            justify-content: space-between;
+
+            .service_card {
+                width: 20%;
+
+                *:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+
+                img {
+                    width: 90px;
+                }
+            }
+        }
+    }
+
+    #competences_container {
+        color: $secondary-color;
+        display: flex;
+        justify-content: space-between;
+
+        .competence_card {
+            width: 30%;
+
+            h3 {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    #adaptation_container {
+        display: flex;
+        align-items: flex-start;
+
+        #adaptation_text {
+
+            *:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            h2 {
+                color: $fourth-color;
+            }
+        }
+
+        img {
+            width: 400px;
+        }
+    }
+
+    #citation_container {
+        display: flex;
+        justify-content: space-between;
+        gap: $spacing-large;
+        color: $secondary-color;
+
+        .citation-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width: 60px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    #pourquoi_nous_container {
+
+        h2 {
+            color: $fourth-color;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #pourquoi_nous {
+            display: flex;
+            justify-content: space-between;
+
+            .pourquoi_nous_card {
+                width: 30%;
+
+                *:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+
+                img {
+                    width: 90px;
+                }
+            }
+        }
+    }
+
+    #passez_le_cap_container {
+        color: $secondary-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $spacing-medium;
+    }
+
+    #footer_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
