@@ -38,6 +38,7 @@
         }
 
     }
+
     @media screen and (max-width: 600px) {
         #banner_container {
             flex-direction: column-reverse;
@@ -75,6 +76,12 @@
                     width: 40%;
                 }
             }
+
+            @media screen and (max-width: 700px) {
+                .service_card {
+                    width: 80%;
+                }
+            }
         }
     }
 
@@ -93,6 +100,7 @@
         }
 
     }
+
     @media screen and (max-width: 800px) {
         #competences_container {
             justify-content: space-evenly;
@@ -100,6 +108,16 @@
 
             .competence_card {
                 width: 40%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        #competences_container {
+            justify-content: flex-start;
+
+            .competence_card {
+                width: 80%;
             }
         }
     }
@@ -124,6 +142,7 @@
         }
 
     }
+
     @media screen and (max-width: 800px) {
         #adaptation_container {
             align-items: center;
@@ -133,6 +152,7 @@
             }
         }
     }
+
     @media screen and (max-width: 600px) {
         #adaptation_container {
             flex-direction: column;
@@ -183,14 +203,29 @@
                 }
             }
         }
+
         @media screen and (max-width: 800px) {
             #pourquoi_nous {
                 justify-content: space-evenly;
                 row-gap: $spacing-medium;
-        
+
                 .pourquoi_nous_card {
                     width: 40%;
                     text-align: center;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        #pourquoi_nous_container {
+            text-align: center;
+
+            #pourquoi_nous {
+                justify-content: center;
+
+                .pourquoi_nous_card {
+                    width: 80%;
                 }
             }
         }
