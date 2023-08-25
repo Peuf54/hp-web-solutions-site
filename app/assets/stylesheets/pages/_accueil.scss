@@ -217,7 +217,7 @@
         @media screen and (max-width: 800px) {
             #pourquoi_nous {
                 justify-content: space-evenly;
-                row-gap: $spacing-medium;
+                gap: $spacing-medium;
 
                 .pourquoi_nous_card {
                     width: 40%;
