@@ -1,0 +1,55 @@
+/* ---------- COLORS ---------- */
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$accent-color: #ff9800;
+$background-color: #f4f4f4;
+/* ------- END COLORS ------- */
+
+/* ---------- COLOR CLASSES ---------- */
+.color-primary {
+    color: $primary-color;
+}
+
+.color-secondary {
+    color: $secondary-color;
+}
+
+.color-accent {
+    color: $accent-color;
+}
+
+.color-background {
+    background-color: $background-color;
+}
+/* ------- END COLOR CLASSES ------- */
+
+/* ---------- BACKGROUND COLOR CLASSES ---------- */
+.bg-primary {
+    background-color: $primary-color;
+}
+
+.bg-secondary {
+    background-color: $secondary-color;
+}
+
+.bg-accent {
+    background-color: $accent-color;
+}
+
+.bg-background {
+    background-color: $background-color;
+}
+/* ------- END BACKGROUND COLOR CLASSES ------- */
+
+/* ---------- SPACING ---------- */
+$spacing-unit: 8px;
+$spacing-small: $spacing-unit * 2;
+$spacing-medium: $spacing-unit * 3;
+$spacing-large: $spacing-unit * 4;
+/* ------- END SPACING ------- */
+
+/* ---------- BORDER ---------- */
+$border-width: 1px;
+$border-radius: 4px;
+/* ------- END BORDER ------- */
+

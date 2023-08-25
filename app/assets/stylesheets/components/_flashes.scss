@@ -1,0 +1,40 @@
+/* Styles for flashes */
+.flash {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+    animation: fadeOut 5s ease forwards;
+
+    &.notice {
+        background-color: rgba(40, 167, 70, 0.5);
+        color: rgba(33, 136, 56, 0.9);
+        border: 1px solid rgba(33, 136, 56, 0.9);
+    }
+
+    &.alert {
+        background-color: rgba(220, 53, 70, 0.5);
+        color: rgba(200, 35, 51, 0.9);
+        border: 1px solid rgba(200, 35, 51, 0.9);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

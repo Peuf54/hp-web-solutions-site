@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>V1</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+    <nav>
+    <ul>
+        <li><%= link_to 'Accueil', root_path %></li>
+        <li><%= link_to 'Tarifs', tarifs_path %></li>
+        <li><%= link_to 'Nos Réalisations', nos_realisations_path %></li>
+        <li><%= link_to 'Contact', contact_path %></li>
+    </ul>
+</nav>
+<%= yield %>
+  <%= render 'shared/flashes' %>
+</body>
+</html>
