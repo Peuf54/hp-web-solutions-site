@@ -1,24 +1,41 @@
-<div class="mail_container">
-    <img class="logo" src="cid:logo-min.png" alt="Logo de HP Web Solutions" width="300">
-    <p>Nom et Prénom: <strong><%= @contact.name %></strong></p>
-    <p>Nom de la société: <strong><%= @contact.company_name %></strong></p>
-    <p>Adresse e-mail: <strong><%= @contact.email %></strong></p>
-    <p>Numéro de téléphone: <strong><%= @contact.phone %></strong></p>
-    <p>Description du projet:<br><br> <%= @contact.project_description %></p>
-</div>
-
-<style>
-    .mail_container {
-        width: 500px;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        align-item: center;
-        gap: 15px;
-        text-align: center;
-    }
-    .logo {
-        width: 300px;
-        margin: auto;
-    }
-</style>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nouvelle demande de contact</title>
+    <style>
+        .mail_container {
+            width: 600px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .logo {
+            width: 300px;
+            margin: auto;
+        }
+        .greeting {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mail_container">
+        <img class="logo" src="cid:logo-min.png" alt="Logo de HP Web Solutions" width="300">
+        <h1 class="greeting">Nouvelle demande de contact de <%= @contact.name %> !</h1>
+        <p>Une nouvelle demande de contact a été envoyée via votre site web.</p>
+        <p>Voici les détails :</p>
+        <p><strong>Nom et Prénom:</strong> <%= @contact.name %></p>
+        <p><strong>Nom de la société:</strong> <%= @contact.company_name %></p>
+        <p><strong>Adresse e-mail:</strong> <%= @contact.email %></p>
+        <p><strong>Numéro de téléphone:</strong> <%= @contact.phone %></p>
+        <p><strong>Description du projet:</strong></p>
+        <p><%= @contact.project_description %></p>
+        <p>Prenez contact avec ce client dès que possible pour discuter davantage des détails.</p>
+        <p>Cordialement,<br>Votre équipe HP Web Solutions</p>
+    </div>
+</body>
+</html>
