@@ -1,44 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
+    <meta charset="UTF-8">
     <title>HP Web Solutions - Site Web & Application sur mesure | Val de Briey</title>
     <meta name="description" content="HP Web Solutions offre des solutions sur mesure en conception de site web et d'outils sur mesure à Val de Briey et ses alentours.">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <html lang="fr">
     <link rel="canonical" href="https://hpwebsolutions.fr">
-    <%# <link rel="preload" as="image" href="https://i.ibb.co/hFw6KPb/hero-illustration.webp"> %>
-    <link rel="preload" as="style" href="<%= asset_path 'application.css' %>">
-    <!-- Preconnect -->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-    <!-- Preload the stylesheet -->
-      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@100;200;400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  
-    <!-- Load the stylesheet asynchronously -->
-      <script>
-          var font = document.createElement('link');
-          font.rel = 'stylesheet';
-          font.href = 'https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@100;200;400;700&display=swap';
-          font.type = 'text/css';
-          var goodFont = document.getElementsByTagName('link')[0];
-          goodFont.parentNode.insertBefore(font, goodFont);
-      </script>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "HP Web Solutions",
-      "url": "https://hpwebsolutions.fr"
-    }
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Preload assets -->
+    <link rel="preload" as="style" href="<%= asset_path 'application.css' %>">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@100;200;400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Load the stylesheet asynchronously -->
+    <script>
+      var font = document.createElement('link');
+      font.rel = 'stylesheet';
+      font.href = 'https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@100;200;400;700&display=swap';
+      font.type = 'text/css';
+      var goodFont = document.getElementsByTagName('link')[0];
+      goodFont.parentNode.insertBefore(font, goodFont);
     </script>
 
+    <!-- Remaining assets -->
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
 
+    <!-- Favicon and touch icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
