@@ -1,45 +1,144 @@
 <div id="tarifs_container">
-    <div class="background">
-        <div class="container">
-            <div class="panel pricing-table">
-            
-            <div class="pricing-plan">
-                <img src="https://s22.postimg.cc/8mv5gn7w1/paper-plane.png" alt="" class="pricing-img">
-                <h2 class="pricing-header">Starter</h2>
-                <p class="pricing-header">L'essentiel pour démarrer.</p>
-                <ul class="pricing-features">
-                <li class="pricing-features-item">Custom domains</li>
-                <li class="pricing-features-item">Sleeps after 30 mins of inactivity</li>
-                </ul>
-                <span class="pricing-price">Free</span>
-                <a href="#/" class="pricing-button">Sign up</a>
-            </div>
-            
-            <div class="pricing-plan">
-                <img src="https://s28.postimg.cc/ju5bnc3x9/plane.png" alt="" class="pricing-img">
-                <h2 class="pricing-header">Pro</h2>
-                <p class="pricing-header">Plus de services pour un site toujours au top.</p>
-                <ul class="pricing-features">
-                <li class="pricing-features-item">Never sleeps</li>
-                <li class="pricing-features-item">Multiple workers for more powerful apps</li>
-                </ul>
-                <span class="pricing-price">$150</span>
-                <a href="#/" class="pricing-button is-featured">Free trial</a>
-            </div>
-            
-            <div class="pricing-plan">
-                <img src="https://s21.postimg.cc/tpm0cge4n/space-ship.png" alt="" class="pricing-img">
-                <h2 class="pricing-header">Platinium</h2>
-                <p class="pricing-header">L'excellence à votre portée.</p>
-                <ul class="pricing-features">
-                <li class="pricing-features-item">Dedicated</li>
-                <li class="pricing-features-item">Simple horizontal scalability</li>
-                </ul>
-                <span class="pricing-price">$400</span>
-                <a href="#/" class="pricing-button">Free trial</a>
-            </div>
-            
-            </div>
+
+    <h2 class="color-fourth">Offres Développement</h2>
+
+    <div class="snip1265">
+        <!-- Landing Page Offer -->
+        <div class="plan">
+            <header><i class="ion-ios-paper-plane-outline"></i>
+                <h4 class="plan-title">
+                    Landing Page
+                </h4>
+                <p class="plan-description">Idéale pour les lancements de produits ou les événements.</p>
+                <div class="plan-cost"><span class="plan-price">à partir de 400€ </span></div>
+            </header>
+            <ul class="plan-features">
+                <li>1 Page</li>
+                <li>Nom de domaine</li>
+                <li>Optimisé pour le SEO</li>
+                <li>Formulaire de contact</li>
+                <li>Design responsif</li>
+            </ul>
+            <div class="plan-select"><%= link_to 'Contact', contact_path %></div>
+        </div>
+
+        <!-- Site Vitrine Offer -->
+        <div class="plan featured">
+            <header><i class="ion-ios-images-outline"></i>
+                <h4 class="plan-title">
+                    Site Vitrine
+                </h4>
+                <p class="plan-description">La meilleure manière de présenter votre entreprise et ses services.</p>
+                <div class="plan-cost"><span class="plan-price">à partir de 950€ </span></div>
+            </header>
+            <ul class="plan-features">
+                <li>2 - 5 Pages</li>
+                <li>Nom de domaine</li>
+                <li>Optimisé pour le SEO</li>
+                <li>Formulaire de contact</li>
+                <li>Design responsif</li>
+                <li>Galerie de photos</li>
+                <li>Divers options (blogging, administration, espace de connexion...)</li>
+            </ul>
+            <div class="plan-select"><%= link_to 'Contact', contact_path %></div>
+        </div>
+
+        <!-- E-Boutique Offer -->
+        <div class="plan">
+            <header><i class="ion-ios-cart-outline"></i>
+                <h4 class="plan-title">
+                    E-Boutique
+                </h4>
+                <p class="plan-description">Vendez vos produits en ligne.</p>
+                <div class="plan-cost"><span class="plan-price">à partir de 2 000€ </span></div>
+            </header>
+            <ul class="plan-features">
+                <li>2 - 10 Pages</li>
+                <li>Nom de domaine</li>
+                <li>Optimisé pour le SEO</li>
+                <li>Formulaire de contact</li>
+                <li>Galerie de photos</li>
+                <li>Divers options (blogging, administration, espace de connexion...)</li>
+                <li>Paiements sécurisés</li>
+                <li>Gestion de produits</li>
+                <li>Suivi des commandes</li>
+                <li>Design responsif</li>
+            </ul>
+            <div class="plan-select"><%= link_to 'Contact', contact_path %></div>
+        </div>
+
+        <!-- Custom Solution Offer -->
+        <div class="plan">
+            <header><i class="ion-ios-code-working"></i>
+                <h4 class="plan-title">
+                    Custom Solution
+                </h4>
+                <p class="plan-description">Adaptée à vos besoins uniques.</p>
+                <div class="plan-cost"><span class="plan-price">Basé sur le cahier des charges</span></div>
+            </header>
+            <ul class="plan-features">
+                <li>Solutions personnalisées</li>
+                <li>Fonctionnalités avancées</li>
+                <li>Intégrations tierces</li>
+            </ul>
+            <div class="plan-select"><%= link_to 'Contact', contact_path %></div>
+        </div>
+    </div>
+
+    <h2 class="color-fourth">Offres Maintenance</h2>
+
+    <div class="snip1265">
+
+        <!-- Starter Offer -->
+        <div class="plan">
+            <header><i class="ion-ios-navigate-outline"></i>
+                <h4 class="plan-title">
+                    Starter
+                </h4>
+                <div class="plan-cost"><span class="plan-price">75€ </span><span class="plan-type">/ mois</span></div>
+            </header>
+            <ul class="plan-features">
+                <li>Hébergement</li>
+                <li>1h de maintenance par mois</li>
+                <li>Mises à jour mensuelles 'sécurité'</li>
+            </ul>
+            <div class="plan-select"><%= link_to 'Contact', contact_path %></div>
+        </div>
+    
+        <!-- Pro Offer -->
+        <div class="plan">
+            <header><i class="ion-ios-navigate-outline"></i>
+                <h4 class="plan-title">
+                    Pro
+                </h4>
+                <div class="plan-cost"><span class="plan-price">125€ </span><span class="plan-type">/ mois</span></div>
+            </header>
+            <ul class="plan-features">
+                <li>Hébergement</li>
+                <li>2h de maintenance par mois</li>
+                <li>Mises à jour mensuelles 'sécurité' + 'performance'</li>
+                <li>Sauvegardes Mensuelles</li>
+            </ul>
+            <div class="plan-select"><%= link_to 'Contact', contact_path %></div>
+        </div>
+
+        <!-- Platinium Offer -->
+        <div class="plan featured">
+            <header><i class="ion-ios-people"></i>
+                <h4 class="plan-title">
+                    Platinium
+                </h4>
+                <div class="plan-cost"><span class="plan-price">180€ </span><span class="plan-type">/ mois</span></div>
+            </header>
+            <ul class="plan-features">
+                <li>Hébergement</li>
+                <li>3h de maintenance par mois</li>
+                <li>Mises à jour hebdomadaires 'sécurité' + 'performance'</li>
+                <li>Sauvegarde Bi-mensuelles</li>
+                <li>Assistance téléphonique prioritaire</li>
+                <li>Optimisation SEO continue</li>
+            </ul>
+            <div class="plan-select"><%= link_to 'Contact', contact_path %></div>
         </div>
     </div>
 </div>
