@@ -46,7 +46,10 @@
 
     @media screen and (max-width: 600px) {
         #banner_container {
-            flex-direction: column-reverse;
+            // flex-direction: column-reverse;
+            img {
+                display: none;
+            }
         }
     }
 
