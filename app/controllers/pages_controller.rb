@@ -4,10 +4,7 @@ class PagesController < ApplicationController
 
   def tarifs
   end
-
-  def contact
-  end
-
+  
   def nos_realisations
   end
 end

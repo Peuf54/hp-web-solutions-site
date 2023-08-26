@@ -72,3 +72,5 @@ group :test do
 end
 gem "sass-rails"
 gem "devise"
+
+gem "dotenv", "~> 2.8"

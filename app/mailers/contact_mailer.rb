@@ -1,0 +1,8 @@
+class ContactMailer < ApplicationMailer
+    default from: 'contact@hpwebsolutions.fr'
+    
+    def send_contact_email(contact)
+        @contact = contact
+        mail(to: 'contact@hpwebsolutions.fr', subject: 'Nouvelle demande de contact')
+    end
+end

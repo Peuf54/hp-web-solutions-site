@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   get 'pages/tarifs'
   get 'pages/contact'
   get 'pages/nos_realisations'
+  resources :contacts, only: %w[new create]
+
+  post 'send_new_contact', to: 'pages#send_new_contact', as: :send_new_contact
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
