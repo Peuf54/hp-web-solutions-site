@@ -1,24 +1,41 @@
-<p><strong>Nous vous confirmons l'envoi de votre demande de contact auprès de notre agence. Vous serez contactez dans les plus brefs délais par notre équipe.<br>Merci pour votre confiance !</strong></p>
-<div class="mail_container">
-    <img class="logo" src="cid:logo-min.png" alt="Logo de HP Web Solutions" width="300">
-    <p>Nom et Prénom: <strong><%= @contact.name %></strong></p>
-    <p>Adresse e-mail: <strong><%= @contact.email %></strong></p>
-    <p>Numéro de téléphone: <strong><%= @contact.phone %></strong></p>
-    <p>Description du projet:<br><br> <%= @contact.project_description %></p>
-</div>
-
-<style>
-    .mail_container {
-        width: 500px;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        align-item: center;
-        gap: 15px;
-        text-align: center;
-    }
-    .logo {
-        width: 300px;
-        margin: auto;
-    }
-</style>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirmation de votre demande de contact</title>
+    <style>
+        .mail_container {
+            width: 600px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .logo {
+            width: 300px;
+            margin: auto;
+        }
+        .greeting {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mail_container">
+        <img class="logo" src="cid:logo-min.png" alt="Logo de HP Web Solutions" width="300">
+        <h1 class="greeting">Merci de nous avoir contactés, <%= @contact.name %> !</h1>
+        <p>Nous avons bien reçu votre demande et nous nous engageons à vous répondre dans les plus brefs délais.</p>
+        <p>Voici un récapitulatif de votre message :</p>
+        <p><strong>Nom et Prénom:</strong> <%= @contact.name %></p>
+        <p><strong>Nom de la société:</strong> <%= @contact.company_name %></p>
+        <p><strong>Adresse e-mail:</strong> <%= @contact.email %></p>
+        <p><strong>Numéro de téléphone:</strong> <%= @contact.phone %></p>
+        <p><strong>Description du projet:</strong></p>
+        <p><%= @contact.project_description %></p>
+        <p>Si des informations supplémentaires sont nécessaires, l'un de nos conseillers prendra contact avec vous. Nous sommes impatients de collaborer sur votre projet.</p>
+        <p>Cordialement,<br>Équipe HP Web Solutions</p>
+    </div>
+</body>
+</html>
