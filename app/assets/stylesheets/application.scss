@@ -78,6 +78,8 @@ h3 {
     #logo-nav-container .opened {
         width: 170px; // or adjust as per design
         padding: $spacing-small; // Restore padding when opened
+        border: 1px solid #1D638F;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     }
 }
 
