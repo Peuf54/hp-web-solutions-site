@@ -1,114 +1,248 @@
 #accueil_container {
-    // Styles communs et mobiles en premier
-
     #banner_container {
-        flex-direction: column-reverse;
-        row-gap: $spacing-small;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: $spacing_large;
+
+        #banner_text {
+            display: flex;
+            flex-direction: column;
+            gap: $spacing_small;
+            color: $secondary-color;
+
+            h2 {
+                font-family: $main-font;
+            }
+
+            p {
+                font-family: $secondary-font;
+            }
+
+            #banner_cta {
+                display: inline-block;
+                gap: $spacing-small;
+            }
+        }
 
         img {
-            width: 250px;
-            height: 166px;
+            width: 450px;
+        }
+
+        @media screen and (max-width: 800px) {
+            img {
+                width: 250px;
+                height: 166px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        #banner_container {
+            row-gap: $spacing-small;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        #banner_container {
+            flex-direction: column-reverse;
         }
     }
 
     #services_container {
+        h2 {
+            color: $fourth-color;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
         #services {
-            gap: 30px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
 
             .service_card {
-                width: 80%;
+                width: 20%;
+
+                *:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+
+                // img {
+                //     width: 90px;
+                // }
+            }
+
+            @media screen and (max-width: 800px) {
+                .service_card {
+                    width: 40%;
+                }
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            #services {
+                gap: 30px;
+
+                .service_card {
+                    width: 80%;
+                }
             }
         }
     }
 
     #competences_container {
-        justify-content: flex-start;
+        color: $secondary-color;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
 
         .competence_card {
-            width: 80%;
+            width: 30%;
+
+            h3 {
+                margin-bottom: 5px;
+            }
+        }
+
+    }
+
+    @media screen and (max-width: 800px) {
+        #competences_container {
+            justify-content: space-evenly;
+            row-gap: $spacing-medium;
+
+            .competence_card {
+                width: 40%;
+            }
         }
     }
 
-    #adaptation_container {
-        flex-direction: column;
-        gap: $spacing-small;
-    }
+    @media screen and (max-width: 700px) {
+        #competences_container {
+            justify-content: flex-start;
 
-    #pourquoi_nous_container {
-        text-align: center;
-
-        #pourquoi_nous {
-            justify-content: center;
-
-            .pourquoi_nous_card {
+            .competence_card {
                 width: 80%;
             }
         }
     }
 
-    // Règles pour des écrans plus grands
-    @media screen and (min-width: 601px) {
-        #banner_container {
-            flex-direction: row;
+    #adaptation_container {
+        display: flex;
+        align-items: flex-start;
+
+        #adaptation_text {
+
+            *:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            h2 {
+                color: $fourth-color;
+            }
         }
 
+        img {
+            width: 400px;
+        }
+
+    }
+
+    @media screen and (max-width: 800px) {
         #adaptation_container {
-            flex-direction: row;
-        }
-    }
+            align-items: center;
 
-    @media screen and (min-width: 701px) {
-        #services_container {
-            #services {
-                .service_card {
-                    width: 40%;
-                }
-            }
-        }
-
-        #competences_container {
-            .competence_card {
-                width: 40%;
-            }
-        }
-
-        #pourquoi_nous_container {
-            #pourquoi_nous {
-                .pourquoi_nous_card {
-                    width: 40%;
-                }
-            }
-        }
-    }
-
-    @media screen and (min-width: 801px) {
-        #banner_container {
             img {
-                width: 450px;
-                height: 300px;
+                width: 250px;
+                height: 166px;
             }
         }
+    }
 
-        #services_container {
-            #services {
-                .service_card {
-                    width: 20%;
-                }
+    @media screen and (max-width: 600px) {
+        #adaptation_container {
+            flex-direction: column;
+            gap: $spacing-small;
+        }
+    }
+
+    #citation_container {
+        display: flex;
+        justify-content: space-between;
+        gap: $spacing-large;
+        color: $secondary-color;
+
+        .citation-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                // width: 60px;
+                border-radius: 50%;
             }
         }
+    }
 
-        #competences_container {
-            .competence_card {
+    #pourquoi_nous_container {
+
+        h2 {
+            color: $fourth-color;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #pourquoi_nous {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .pourquoi_nous_card {
                 width: 30%;
+
+                *:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+
+                // img {
+                //     width: 90px;
+                // }
             }
         }
 
-        #pourquoi_nous_container {
+        @media screen and (max-width: 800px) {
             #pourquoi_nous {
+                justify-content: space-evenly;
+                gap: $spacing-medium;
+
                 .pourquoi_nous_card {
-                    width: 30%;
+                    width: 40%;
+                    text-align: center;
                 }
             }
         }
+    }
+
+    @media screen and (max-width: 700px) {
+        #pourquoi_nous_container {
+            text-align: center;
+
+            #pourquoi_nous {
+                justify-content: center;
+
+                .pourquoi_nous_card {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    #passez_le_cap_container {
+        color: $secondary-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $spacing-small;
     }
 }
