@@ -10,9 +10,22 @@
     <link rel="canonical" href="https://hpwebsolutions.fr">
     <%# <link rel="preload" as="image" href="https://i.ibb.co/hFw6KPb/hero-illustration.webp"> %>
     <link rel="preload" as="style" href="<%= asset_path 'application.css' %>">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@100;200;400;700&display=swap" rel="stylesheet">
+    <!-- Preconnect -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+    <!-- Preload the stylesheet -->
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@100;200;400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  
+    <!-- Load the stylesheet asynchronously -->
+      <script>
+          var font = document.createElement('link');
+          font.rel = 'stylesheet';
+          font.href = 'https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@100;200;400;700&display=swap';
+          font.type = 'text/css';
+          var goodFont = document.getElementsByTagName('link')[0];
+          goodFont.parentNode.insertBefore(font, goodFont);
+      </script>
 
     <script type="application/ld+json">
     {
