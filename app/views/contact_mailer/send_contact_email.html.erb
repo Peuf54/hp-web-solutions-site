@@ -2,39 +2,39 @@
 <html>
 <head>
     <title>Nouvelle demande de contact</title>
-    <style>
-        .mail_container {
-            width: 600px;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-        .logo {
-            width: 300px;
-            margin: auto;
-        }
-        .greeting {
-            font-size: 18px;
-        }
-    </style>
 </head>
 <body>
-    <div class="mail_container">
-        <h1 class="greeting">Nouvelle demande de contact de <%= @contact.name %> !</h1>
-        <p>Une nouvelle demande de contact a été envoyée via votre site web.</p>
-        <p>Voici les détails :</p>
-        <p><strong>Nom et Prénom:</strong> <%= @contact.name %></p>
-        <p><strong>Nom de la société:</strong> <%= @contact.company_name %></p>
-        <p><strong>Adresse e-mail:</strong> <%= @contact.email %></p>
-        <p><strong>Numéro de téléphone:</strong> <%= @contact.phone %></p>
-        <p><strong>Description du projet:</strong></p>
-        <p><%= @contact.project_description %></p>
-        <p>Prenez contact avec ce client dès que possible pour discuter davantage des détails.</p>
-        <p>Cordialement,<br>Votre équipe HP Web Solutions</p>
-    </div>
+    <table width="600" align="center" style="font-family: Arial, sans-serif; text-align: center;">
+        <tr>
+            <td>
+                <h1 style="font-size: 18px;">Nouvelle demande de contact de <%= @contact.name %> !</h1>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Une nouvelle demande de contact a été envoyée via votre site web.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p><strong>Nom et Prénom:</strong> <%= @contact.name %></p>
+                <p><strong>Nom de la société:</strong> <%= @contact.company_name %></p>
+                <p><strong>Adresse e-mail:</strong> <%= @contact.email %></p>
+                <p><strong>Numéro de téléphone:</strong> <%= @contact.phone %></p>
+                <p><strong>Description du projet:</strong></p>
+                <p><%= @contact.project_description %></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Prenez contact avec ce client dès que possible pour discuter davantage des détails.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Cordialement,<br>Votre équipe HP Web Solutions</p>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
