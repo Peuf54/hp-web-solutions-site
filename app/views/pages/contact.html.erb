@@ -1,3 +1,21 @@
 <div id="contact_container">
-    <h2>Contact</h2>
+    <div class="orange_plate">
+        <h1>Contactez-nous</h1>
+    </div>
+
+<%= form_with model: @contact, local: true do |f| %>
+    <%= f.label :name, 'Nom et Prénom:' %>
+    <%= f.text_field :name %>
+
+    <%= f.label :email, 'Adresse e-mail:' %>
+    <%= f.email_field :email %>
+
+    <%= f.label :phone, 'Numéro de téléphone:' %>
+    <%= f.telephone_field :phone %>
+
+    <%= f.label :project_description, 'Description du projet:' %>
+    <%= f.text_area :project_description %>
+
+    <%= f.submit 'Envoyer', class: 'main-cta cta' %>
+<% end %>
 </div>
