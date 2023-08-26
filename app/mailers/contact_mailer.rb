@@ -1,5 +1,5 @@
 class ContactMailer < ApplicationMailer
-    default from: 'contact@hpwebsolutions.fr'
+    default from: 'hugo@hpwebsolutions.fr'
     
     def send_contact_email(contact)
         @contact = contact
