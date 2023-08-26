@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   get 'nos_realisations', to: 'pages#nos_realisations'
   get 'tarifs', to: 'pages#tarifs'
-  root to: 'pages#accueil'
+  # root to: 'pages#accueil'
+  root to: 'pages#nos_realisations'
   
   resources :contacts, only: %w[new create]
   devise_for :users
