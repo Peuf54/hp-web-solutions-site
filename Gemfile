@@ -74,3 +74,5 @@ gem "sass-rails"
 gem "devise"
 
 gem "dotenv", "~> 2.8"
+
+gem "dotenv-rails", "~> 2.8"
