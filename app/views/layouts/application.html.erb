@@ -24,6 +24,20 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
+    <!-- Remaining assets -->
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    
+    <!-- Load the stylesheet asynchronously -->
+    <script>
+      var font = document.createElement('link');
+      font.rel = 'stylesheet';
+      font.href = 'https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@100;200;400;700&display=swap';
+      font.type = 'text/css';
+      var goodFont = document.getElementsByTagName('link')[0];
+      goodFont.parentNode.insertBefore(font, goodFont);
+    </script>
+
   </head>
 
   <body>
@@ -49,18 +63,5 @@
     <%= render 'shared/footer' %>
     <%= render 'shared/flashes' %>
     
-    <!-- Remaining assets -->
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-    
-    <!-- Load the stylesheet asynchronously -->
-    <script>
-      var font = document.createElement('link');
-      font.rel = 'stylesheet';
-      font.href = 'https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@100;200;400;700&display=swap';
-      font.type = 'text/css';
-      var goodFont = document.getElementsByTagName('link')[0];
-      goodFont.parentNode.insertBefore(font, goodFont);
-    </script>
   </body>
 </html>
