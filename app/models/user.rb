@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   has_many :articles
+
+  def fullname
+    "#{self.first_name.capitalize} #{self.last_name.capitalize}"
+  end
 end

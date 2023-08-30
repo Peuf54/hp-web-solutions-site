@@ -20,6 +20,23 @@
         margin-top: $spacing-small;
     }
 
+    .article_details {
+        font-size: .8rem;
+        border-left: 3px solid $fourth-color;
+        padding-left: 8px;
+    }
+
+    .article_back_details {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 8px;
+
+        * {
+            margin-block: 0;
+        }
+    }
+
     .highlight {
         background-color: lighten($secondary-color, 20%);
         padding: 2px;
