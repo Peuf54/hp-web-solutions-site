@@ -44,15 +44,6 @@
         }
     }
 
-    @media screen and (max-width: 600px) {
-        #banner_container {
-            // flex-direction: column-reverse;
-            img {
-                display: none;
-            }
-        }
-    }
-
     #services_container {
         h2 {
             color: $fourth-color;
