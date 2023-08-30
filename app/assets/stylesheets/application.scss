@@ -1,6 +1,8 @@
 @import "variables";
 @import "components/*";
 @import "pages/*";
+@import "articles/*";
+// @import 'actiontext.css';
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@100;200;400;700&display=swap');
 
@@ -19,6 +21,14 @@
 
 body {
     overflow-x: hidden;
+}
+
+h1 {
+    padding-block: $spacing-medium;
+    font-family: $main-font;
+    color: $secondary-color;
+    background-color: $third-color;
+    text-align: center;
 }
 
 h1,
@@ -60,7 +70,7 @@ h3 {
         }
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 900px) {
         nav {
             background-color: $secondary-color;
             position: absolute;
@@ -78,7 +88,7 @@ h3 {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     #logo-nav-container {
         padding: $spacing-small;
     }
@@ -117,7 +127,7 @@ h3 {
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
     #logo-nav-container .menu_icon {
         display: none;
     }

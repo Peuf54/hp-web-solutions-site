@@ -1,13 +1,5 @@
 #contact_container {
 
-    h1 {
-        padding-block: $spacing-medium;
-        font-family: $main-font;
-        color: $secondary-color;
-        background-color: $third-color;
-        text-align: center;
-    }
-
     form {
         display: flex;
         flex-direction: column;

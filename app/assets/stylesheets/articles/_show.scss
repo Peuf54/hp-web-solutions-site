@@ -1,0 +1,75 @@
+#article_container {
+    h1 {
+        padding-block: $spacing-medium;
+        font-family: $main-font;
+        color: $secondary-color;
+        background-color: $third-color;
+        text-align: center;
+    }
+
+    h2 {
+        color: $third-color;
+    }
+
+    p {
+        margin-top: 8px;
+    }
+
+    h2,
+    h3 {
+        margin-top: $spacing-small;
+    }
+
+    .highlight {
+        background-color: lighten($secondary-color, 20%);
+        padding: 2px;
+    }
+
+    .question {
+        font-style: italic;
+    }
+
+    .affirmation {
+        font-weight: bold;
+        color: darken($third-color, 10%);
+    }
+
+    .intro {
+        font-weight: 300;
+        font-size: 1.15rem;
+    }
+
+    .cta-block {
+        font-weight: 600;
+        margin-top: $spacing-small;
+    }
+
+    // .company-name {
+    //     font-family: $special-font;
+    // }
+
+    .contact-link {
+        text-decoration: underline;
+        color: darken($third-color, 20%);
+    }
+
+    @media screen and (min-width: 650px) {
+        h2 {
+            margin-left: $spacing-small;
+        }
+
+        p {
+            margin-left: $spacing-medium;
+            font-size: 1.2rem;
+            margin-top: $spacing-medium;
+        }
+
+        .cta-block {
+            font-size: 1.4rem;
+        }
+
+        .intro {
+            font-size: 1.3rem;
+        }
+    }
+}

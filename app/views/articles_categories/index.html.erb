@@ -1,0 +1,19 @@
+<div id="article_category_new_container" class="sizer">
+
+    <% @categories.each do |category| %>
+        <p><%= category.title %> - <%= link_to 'Delete', articles_category_path(category), data: { turbo_method: :delete } %></p>
+    <% end %>
+
+    <br>
+
+    <%= form_with model: @articles_categories do |form| %>
+        <div class="field">
+            <%= form.label :title %>
+            <%= form.text_area :title, rows: 1, cols: 30 %>
+        </div>
+
+        <div class="field">
+            <%= form.submit %>
+        </div>
+    <% end %>
+</div>

@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   root to: 'pages#accueil'
   
   resources :contacts, only: %w[new create]
+  resources :articles_categories, only: %w[index destroy create]
+  resources :articles
+
   devise_for :users, :skip => [:registrations] 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

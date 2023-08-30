@@ -1,0 +1,22 @@
+<div id="article_new_container" class="sizer">
+    <%= form_with model: @article do |form| %>
+        <div class="field">
+            <%= form.label :title %>
+            <%= form.text_area :title, rows: 3, cols: 30 %>
+        </div>
+
+        <div class="field">
+            <%= form.label :content %>
+            <%= form.text_area :content, class: 'editable', rows: 30 %>
+        </div>
+        
+        <div class="field">
+            <%= form.label :article_category %>
+            <%= form.collection_select :article_category_id, ArticleCategory.order(:title), :id, :title %>
+        </div>
+
+        <div class="field">
+            <%= form.submit %>
+        </div>
+    <% end %>
+</div>
