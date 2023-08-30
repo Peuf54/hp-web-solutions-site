@@ -32,7 +32,7 @@
   <body>
     <div id="logo-nav-container" class="sizer" data-controller="burger-menu" width="64" height="60">
       <%= link_to root_path do %>
-        <img src="<%= asset_path 'logo.svg' %>" alt="Logo de HP Web Solutions" height="300" height="79" loading="lazy">
+        <img src="<%= asset_path 'logo.svg' %>" alt="Logo de HP Web Solutions" height="300" height="79">
       <% end %>
 
       <img class="menu_icon" id="open_icon" src="<%= asset_path 'burger_menu.svg' %>" alt="Icon d'ouverture menu." data-action="click->burger-menu#open" data-burger-menu-target="openIcon">
