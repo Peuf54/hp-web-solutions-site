@@ -16,16 +16,6 @@
     <!-- Preload assets -->
     <link rel="preload" as="style" href="<%= asset_path 'application.css' %>">
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@100;200;400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-    
-    <!-- Load the stylesheet asynchronously -->
-    <script>
-      var font = document.createElement('link');
-      font.rel = 'stylesheet';
-      font.href = 'https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@100;200;400;700&display=swap';
-      font.type = 'text/css';
-      var goodFont = document.getElementsByTagName('link')[0];
-      goodFont.parentNode.insertBefore(font, goodFont);
-    </script>
 
     <!-- Remaining assets -->
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
@@ -37,22 +27,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <script src="https://cdn.tiny.cloud/1/fy797dzzdvsf994ijhdhbbn9gldk35db66yi55payc1wv2v7/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-
-    <script>
-      tinymce.init({
-        selector: '.editable',  // change this value according to your HTML
-        plugins: 'ai mentions anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed permanentpen footnotes advtemplate advtable advcode editimage tableofcontents mergetags powerpaste tinymcespellchecker autocorrect a11ychecker typography inlinecss',
-        toolbar: 'undo redo | code blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | align lineheight | tinycomments | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
-      });
-    </script>
-
   </head>
 
   <body>
     <div id="logo-nav-container" class="sizer" data-controller="burger-menu" width="64" height="60">
       <%= link_to root_path do %>
-        <img src="<%= asset_path 'logo.svg' %>" alt="Logo de HP Web Solutions" height="300" height="79">
+        <img src="<%= asset_path 'logo.svg' %>" alt="Logo de HP Web Solutions" height="300" height="79" loading="lazy">
       <% end %>
 
       <img class="menu_icon" id="open_icon" src="<%= asset_path 'burger_menu.svg' %>" alt="Icon d'ouverture menu." data-action="click->burger-menu#open" data-burger-menu-target="openIcon">
@@ -71,5 +51,15 @@
     <%= yield %>
     <%= render 'shared/footer' %>
     <%= render 'shared/flashes' %>
+    
+    <!-- Load the stylesheet asynchronously -->
+    <script>
+      var font = document.createElement('link');
+      font.rel = 'stylesheet';
+      font.href = 'https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@100;200;400;700&display=swap';
+      font.type = 'text/css';
+      var goodFont = document.getElementsByTagName('link')[0];
+      goodFont.parentNode.insertBefore(font, goodFont);
+    </script>
   </body>
 </html>
