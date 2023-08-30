@@ -1,5 +1,6 @@
-import { Controller } from "stimulus";
+import { Controller } from "@hotwired/stimulus"
 
+// Connects to data-controller="responsive-image"
 export default class extends Controller {
   connect() {
     this.checkScreenSize();
