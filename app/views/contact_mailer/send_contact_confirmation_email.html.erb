@@ -7,16 +7,22 @@
     <table width="600" align="center" style="font-family: Arial, sans-serif; text-align: center;">
         <tr>
             <td>
-                <h1 style="font-size: 18px;">Merci de nous avoir contactés, <%= @contact.name %> !</h1>
+                <h1 style="font-size: 18px;">Cher(e) <%= @contact.name %>,</h1>
             </td>
         </tr>
         <tr>
             <td>
-                <p>Nous avons bien reçu votre demande et nous nous engageons à vous répondre dans les plus brefs délais.</p>
+                <p>Merci d'avoir pris le temps de nous contacter. Nous sommes ravis de l'intérêt que vous portez à HP Web Solutions.</p>
             </td>
         </tr>
         <tr>
             <td>
+                <p>Nous avons bien reçu votre demande et nous sommes actuellement en train de l'examiner. Vous pouvez vous attendre à une réponse de notre part dans les plus brefs délais.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2 style="font-size: 16px;">Résumé de votre demande :</h2>
                 <p><strong>Nom et Prénom:</strong> <%= @contact.name %></p>
                 <p><strong>Nom de la société:</strong> <%= @contact.company_name %></p>
                 <p><strong>Adresse e-mail:</strong> <%= @contact.email %></p>
@@ -27,12 +33,18 @@
         </tr>
         <tr>
             <td>
-                <p>Si des informations supplémentaires sont nécessaires, l'un de nos conseillers prendra contact avec vous. Nous sommes impatients de collaborer sur votre projet.</p>
+                <p>Si nous avons besoin d'informations supplémentaires pour avancer, l'un de nos conseillers vous contactera directement.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Nous vous remercions de considérer HP Web Solutions pour votre projet et nous sommes impatients de la possibilité de travailler ensemble.</p>
             </td>
         </tr>
         <tr>
             <td>
                 <p>Cordialement,<br>Hugo de HP Web Solutions</p>
+                <p>P.S.: Pour toute question ou précision, n'hésitez pas à répondre directement à ce mail, nous écrire à contact@hpwebsolutions.fr ou nous contacter par téléphone au 06 22 24 66 88.</p>
             </td>
         </tr>
     </table>
