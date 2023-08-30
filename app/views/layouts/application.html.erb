@@ -17,9 +17,6 @@
     <link rel="preload" as="style" href="<%= asset_path 'application.css' %>">
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@100;200;400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 
-    <!-- Remaining assets -->
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
 
     <!-- Favicon and touch icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -51,6 +48,10 @@
     <%= yield %>
     <%= render 'shared/footer' %>
     <%= render 'shared/flashes' %>
+    
+    <!-- Remaining assets -->
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
     
     <!-- Load the stylesheet asynchronously -->
     <script>
