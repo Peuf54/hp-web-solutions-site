@@ -1,0 +1,16 @@
+#cgu_container {
+    h2 {
+        color: $third-color;
+        text-align: center;
+    }
+
+    h3, h4 {
+        color: $fourth-color;
+        text-align: center;
+    }
+
+    p {
+        margin-block: $spacing-medium;
+        text-align: center;
+    }
+}
