@@ -17,7 +17,7 @@
         <%= f.telephone_field :phone %>
 
         <%= f.label :project_description, 'Description du projet:' %>
-        <%= f.text_area :project_description %>
+        <%= f.text_area :project_description, rows: 10 %>
 
         <%= f.submit 'Envoyer', class: 'main-cta cta' %>
     <% end %>

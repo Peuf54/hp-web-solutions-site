@@ -8,6 +8,6 @@ class ContactMailer < ApplicationMailer
 
     def send_contact_confirmation_email(contact)
         @contact = contact
-        mail(to: 'h.petament@icloud.com', subject: 'Votre demande de contact')
+        mail(to: @contact.email, subject: 'Votre demande de contact chez HP Web Solutions')
     end
 end
