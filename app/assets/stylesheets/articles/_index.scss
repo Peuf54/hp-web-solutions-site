@@ -15,6 +15,9 @@
             box-shadow: 3px 3px 15px 11px rgba(161, 161, 161, 0.5);
             padding: $spacing-small;
             border-radius: $big-border-radius;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
             *:not(:first-child) {
                 margin-top: $spacing-small;
