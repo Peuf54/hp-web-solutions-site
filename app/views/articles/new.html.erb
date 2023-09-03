@@ -16,6 +16,11 @@
         </div>
 
         <div class="field">
+            <%= form.label :description %>
+            <%= form.text_area :description, rows: 3, cols: 30 %>
+        </div>
+
+        <div class="field">
             <%= form.label :content %>
             <%= form.text_area :content, class: 'editable', rows: 30 %>
         </div>
